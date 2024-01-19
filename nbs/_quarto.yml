@@ -3,7 +3,12 @@ project:
 
 format:
   html:
-    theme: cosmo
+    cover-image: data-galaxy.png
+    theme:
+      light: flatly
+      dark: slate
+    fontsize: 1.1em
+    linestretch: 1.7
     css: styles.css
     toc: true
 
@@ -11,10 +16,10 @@ website:
   twitter-card: true
   open-graph: true
   repo-actions: [issue]
+  reader-mode: true
   navbar:
-    background: primary
+    background: dark
     search: true
-  sidebar:
-    style: floating
+  sidebar: false
 
-metadata-files: [nbdev.yml, sidebar.yml]
+metadata-files: [nbdev.yml]
