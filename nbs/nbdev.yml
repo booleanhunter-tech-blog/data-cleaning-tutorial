@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "defaulter-dynamics"
+  site-url: "https://booleanhunter-tech-blog.github.io/defaulter-dynamics"
+  description: "How to use data analysis to evaluate the driving factors behind loan default"
+  repo-branch: main
+  repo-url: "https://github.com/booleanhunter-tech-blog/defaulter-dynamics"
