@@ -20,6 +20,9 @@ website:
   navbar:
     background: dark
     search: true
+    left:
+      - text: "About"
+        href: "./about.ipynb"
   sidebar: false
 
 metadata-files: [nbdev.yml]
