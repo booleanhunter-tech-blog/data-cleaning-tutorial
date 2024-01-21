@@ -9,6 +9,9 @@ format:
       dark: slate
     fontsize: 1.1em
     linestretch: 1.7
+    grid:
+      margin-width: 325px
+      body-width: 850px
     css: styles.css
     toc: true
 
@@ -24,5 +27,6 @@ website:
       - text: "About"
         href: "./about.ipynb"
   sidebar: false
+  back-to-top-navigation: true
 
 metadata-files: [nbdev.yml]
