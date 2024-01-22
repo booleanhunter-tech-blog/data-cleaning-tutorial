@@ -1,0 +1,26 @@
+name: Lighthouse CI
+
+on:
+  workflow_run:
+    workflows: ["Deploy to GitHub Pages"]
+    types: 
+      - completed
+
+jobs:
+  lhci:
+    name: Lighthouse
+    runs-on: ubuntu-latest
+    if: github.event.workflow_run.conclusion == 'success'
+    steps:
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+      - name: Install Lighthouse CI
+        run: npm install -g @lhci/cli@0.13.x
+      - name: Run Lighthouse CI
+        run: lhci autorun --upload.target=temporary-public-storage --collect.staticDistDir=./
